@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:perfect_eggs/themes/theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,9 +12,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      debugShowCheckedModeBanner: false,
+      theme: appTheme(),
       home: const HomePage(),
     );
   }
@@ -24,6 +24,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(),
+    );
   }
-} 
+}
