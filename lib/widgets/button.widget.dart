@@ -10,7 +10,7 @@ class Button extends StatelessWidget {
 
   final String label;
   final bool selected;
-  final Function callback;
+  final void Function()? callback;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class Button extends StatelessWidget {
         ),
       ),
       child: TextButton(
-        onPressed: callback(),
+        onPressed: callback,
         child: Text(
           label,
           style: const TextStyle(

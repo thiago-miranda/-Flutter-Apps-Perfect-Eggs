@@ -9,7 +9,7 @@ class TypeButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final bloc = Provider.of<AppBloc>(context);
-    return bloc.state == "stopped" ? buttons(bloc) : SizedBox();
+    return bloc.state == "stopped" ? buttons(bloc) : const SizedBox();
   }
 
   Widget buttons(bloc) {
