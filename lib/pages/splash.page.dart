@@ -11,7 +11,7 @@ class SplashPage extends StatelessWidget {
         milliseconds: 3000,
       ),
       () {
-        Navigator.push(
+        Navigator.pushReplacement(
           context,
           MaterialPageRoute(
             builder: (context) => const HomePage(),
@@ -23,20 +23,27 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // delay(context);
+    delay(context);
     return Scaffold(
       body: Column(
-        children: [
-          const SizedBox(height: 60),
-          Container(
+        children: const [
+          SizedBox(height: 60),
+          SizedBox(
             width: double.infinity,
             height: 300,
-            child: const FlareActor(
+            child: FlareActor(
               "assets/animations/egg-cooking.flr",
               alignment: Alignment.center,
               fit: BoxFit.contain,
               isPaused: false,
               animation: "start",
+            ),
+          ),
+          Text(
+            "Perfect Eggs",
+            style: TextStyle(
+              fontSize: 34,
+              fontWeight: FontWeight.bold,
             ),
           ),
         ],

@@ -6,7 +6,6 @@ const accentColor = Color(0xFFFFFFFF);
 
 ThemeData appTheme() {
   return ThemeData(
-    brightness: brightness,
     textTheme: const TextTheme(
       bodyText1: TextStyle(
         fontFamily: "Montserrat",
@@ -49,5 +48,9 @@ ThemeData appTheme() {
       ),
     ),
     primaryColor: primaryColor,
+    colorScheme: ColorScheme?.fromSwatch().copyWith(
+      brightness: brightness,
+      secondary: accentColor,
+    ),
   );
 }

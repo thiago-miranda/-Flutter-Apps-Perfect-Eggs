@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:perfect_eggs/pages/splash.page.dart';
 import 'package:perfect_eggs/themes/theme.dart';
 
 void main() {
@@ -11,21 +12,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Perfect Eggs',
       debugShowCheckedModeBanner: false,
       theme: appTheme(),
-      home: const HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
+      home: const SplashPage(),
     );
   }
 }
